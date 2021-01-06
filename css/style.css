@@ -1,0 +1,321 @@
+/*Fonts*/
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Font/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Slab";
+  src: url("../fonts/Roboto-Slab/RobotoSlab-Light.ttf") format("truetype");
+}
+
+/*File CSS*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*font-size: 1.8rem;*/
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*Mise en forme de l'entête*/
+header {
+  z-index: 2000;
+}
+
+/*header::after {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #fff;        A ajouter avec du JS pour construire un header dynamique
+  position: fixed;
+  left: 0;
+  top: 15%;
+  z-index: 2000;
+}*/
+
+.logo {
+  padding: 0px;
+  margin-right: 150px;
+  position: relative;
+  left: 10%;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  top: 0px;
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  /*transition: 0.3s ease-out;*/
+  text-align: left;
+  background-color: #0a2351;
+  z-index: 2000;
+  padding-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navigation {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menu-elt {
+  margin-right: 20%;
+  font-family: "Gotham";
+  font-size: 1.1rem;
+  line-height: 3.5rem;
+}
+
+.img-elt {
+  padding-top: 3%;
+  opacity: 80%;
+  transition: opacity 0.3s;
+}
+
+.img-elt:hover {
+  opacity: 100%;
+}
+
+.encadre {
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  padding: 15px 10px;
+  transition: all 0.3s ease-in;
+}
+
+.encadre:hover {
+  color: #0a2351;
+  background-color: #ffffff;
+}
+
+/*Mise en forme du corps*/
+main {
+  overflow: hidden;
+}
+
+.overview {
+  position: relative;
+  width: 100%;
+  z-index: 60;
+  padding-top: 50%;
+  padding-bottom: 2%;
+  /*box-sizing: border-box;*/
+}
+
+.main-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.carrousel-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social {
+  margin-left: 3%;
+  margin-top: -31.5%;
+  margin-right: 0;
+  padding: 0;
+  display: block;
+  z-index: 60;
+}
+
+.social-link {
+  margin-bottom: 90%;
+}
+
+.social-link:hover {
+  /*transform: scaleX();*/
+}
+
+.catching-txt {
+  position: relative;
+  z-index: 60;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: -32%;
+  font-size: 100%;
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-shadow: 0 1px 6px hsla(0, 0%, 100%, 0.4);
+  font-family: "Roboto-Slab", fantasy;
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  left: 10%;
+  margin-top: 10%;
+  z-index: 60;
+}
+
+.selection-elt {
+  color: white;
+  margin-right: 15%;
+  margin-top: -19%;
+  font-family: "Roboto-Slab", "Helvetica", "Gotham";
+  font-size: 2rem;
+  line-height: 3.5rem;
+  text-decoration: underline white;
+}
+
+.formations {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.scroll-down-button {
+  z-index: 60;
+  position: relative;
+  left: 50%;
+  margin-top: -10%;
+  display: block;
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  border-radius: 100%;
+  border: 0;
+  background-color: #fff;
+  font-size: 0.7rem;
+  box-shadow: none;
+  line-height: 0.7rem;
+}
+
+.scroll-down-button div img {
+  position: relative;
+  padding-top: 35%;
+  padding-left: 2%;
+}
+
+article {
+  width: 100%;
+}
+
+.article-formation {
+  margin-left: 1%;
+  margin-right: 5%;
+  height: 400px;
+}
+.article-formation:hover {
+  opacity: 70%;
+}
+
+#first-title {
+  padding-top: 10%;
+}
+
+.nth-title {
+  padding-top: 5%;
+}
+
+.page-title {
+  font-size: 5rem;
+  color: #0a2351;
+  font-family: "Roboto-Slab";
+}
+
+.page-title ~ p {
+  font-family: "Gotham";
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #777677;
+}
+
+div > h3 {
+  width: 100%;
+  height: 25%;
+  font-family: "Gotham";
+  position: relative;
+  font-size: 2rem;
+  top: 75%;
+  color: #ffffff;
+}
+
+.table-cost {
+  border-collapse: collapse; /* Éliminer l'espace entre cellules */
+  position: relative;
+  left: 31%;
+}
+
+/*Les bordures par défaut des cellules th et td sont celles du BAS et de GAUCHE*/
+.table-cost th {
+  background-color: lightgray;
+  border-style: none none dotted dotted; /*Haut Droite Bas Gauche*/
+  /*margin: 0;*/
+}
+
+.table-cost td {
+  border-style: none none dotted dotted;
+  padding: 0;
+  margin: 0;
+}
+
+/*Ajout des bordures du HAUT et de DROITE pour certains cas*/
+.table-cost tr th:last-child {
+  border-right: dotted black;
+}
+
+.table-cost tr td:last-child {
+  border-right: dotted black;
+}
+
+.table-cost thead tr * {
+  border-top: dotted black;
+}
+
+/*Couleurs alternées pour les lignes*/
+.table-cost tbody tr:nth-child(2n) td {
+  background-color: lightseagreen;
+}
+
+.table-cost tbody tr:nth-child(2n + 1) td {
+  background-color: palevioletred;
+}
+
+video {
+  width: 100%;
+  height: 500px;
+}
+
+footer {
+  margin-top: 10%;
+  background-color: #0a2351;
+  color: #ffffff;
+  text-align: left;
+  height: 100px;
+}
+
+footer p {
+  padding-left: 2%;
+  padding-top: 2%;
+  font-family: "Gotham";
+}
+
+footer a {
+  text-decoration: underline;
+}
