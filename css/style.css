@@ -52,7 +52,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: start;
-  /*transition: 0.3s ease-out;*/
+  transition: 0.3s ease-out;
   text-align: left;
   background-color: #0a2351;
   z-index: 2000;
@@ -62,7 +62,6 @@ header {
 a {
   text-decoration: none;
   color: #ffffff;
-  transition: color 0.3s;
 }
 
 .navigation {
@@ -87,17 +86,19 @@ a {
 }
 
 .img-elt:hover {
-  opacity: 100%;
+  transform: scale(1.2);
+  transition: 0.3s;
+  opacity: 1;
 }
 
 .encadre {
   cursor: pointer;
   border: 1px solid #ffffff;
   padding: 15px 10px;
-  transition: all 0.3s ease-in;
 }
 
 .encadre:hover {
+  transition: all 0.3s ease-in;
   color: #0a2351;
   background-color: #ffffff;
 }
@@ -113,7 +114,7 @@ main {
   z-index: 60;
   padding-top: 50%;
   padding-bottom: 2%;
-  /*box-sizing: border-box;*/
+  overflow: hidden;
 }
 
 .main-img {
@@ -123,6 +124,43 @@ main {
   width: 100%;
   height: 100%;
   z-index: 1;
+  animation: slideDown 20s infinite;
+  animation-play-state: running;
+}
+
+.carrousel > img:nth-child(2) {
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+.carrousel > img:nth-child(3) {
+  animation-delay: 10s;
+  opacity: 0;
+}
+
+.carrousel > img:nth-child(4) {
+  animation-delay: 15s;
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(765px);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-765px);
+    opacity: 0;
+  }
+  50.1%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
 }
 
 .carrousel-control {
@@ -136,16 +174,20 @@ main {
   margin-top: -31.5%;
   margin-right: 0;
   padding: 0;
+  font-size: 1.8rem;
   display: block;
   z-index: 60;
 }
 
 .social-link {
   margin-bottom: 90%;
+  opacity: 0.6;
 }
 
 .social-link:hover {
-  /*transform: scaleX();*/
+  transform: scale(1.2);
+  transition: 0.3s;
+  opacity: 1;
 }
 
 .catching-txt {
@@ -155,7 +197,6 @@ main {
   margin: 0;
   width: 100%;
   margin-top: -32%;
-  font-size: 100%;
   color: #ffffff;
   font-size: 1.8rem;
   text-shadow: 0 1px 6px hsla(0, 0%, 100%, 0.4);
@@ -180,6 +221,13 @@ main {
   font-size: 2rem;
   line-height: 3.5rem;
   text-decoration: underline white;
+  opacity: 0.8;
+}
+
+.selection-elt:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 .formations {
@@ -206,10 +254,24 @@ main {
   line-height: 0.7rem;
 }
 
+.scroll-down-button:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
 .scroll-down-button div img {
   position: relative;
   padding-top: 35%;
   padding-left: 2%;
+}
+
+.scroll-down-button div img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.page-container {
+  background-color: white;
 }
 
 article {
